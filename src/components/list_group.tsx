@@ -1,14 +1,14 @@
 import { MouseEvent } from "react";
 import { useState } from "react";
 
-function list_group(){
-    let items = [
-        'html',
-        'css',
-        'javascript',
-        'react.js',
-        'json'
-    ];
+// {items: [], heading: string }
+interface props{
+    items: string[];
+    heading: string;
+}
+
+function list_group({items, heading}: props){
+    
 
     const [selected_index, set_selected_index] = useState(-1);
 
@@ -17,7 +17,7 @@ function list_group(){
 
     return(
         <>
-            <h1>List</h1>
+            <h1>{heading}</h1>
             {msg_null}
             <ul className='list-group'>
                 {items.map((item, index) => (
