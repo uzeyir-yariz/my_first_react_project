@@ -1,12 +1,10 @@
-import { ReactNode } from "react";
 
-interface props{
-    childiren: ReactNode;
-}
-
-const Alert = ({childiren}: props) => {
+const Alert = () => {
   return (
-    <div className='alert alert-primary'> {childiren} </div>
+    <div className='alert alert-warning'>
+        <strong>here is close the</strong>
+        <button className="btn-close"></button>
+    </div>
   )
 }
 

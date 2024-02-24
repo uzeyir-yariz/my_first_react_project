@@ -1,31 +1,17 @@
-// import ListGroup from './components/list_group';
-
+import { useState } from "react";
 import Alert from "./components/alert";
+import Button from "./components/btn";
+
 
 function app(){
+  const [alertVisible, setAlertVisible] = useState(false);
+
   return(
     <>
-      <Alert childiren="hello world"/>
+      {alertVisible && <Alert>my alert<Alert/>}
+      <Button />
     </>
   );
 }
 
 export default app;
-
-/* 
-* eski kodlar
- 
-let items = [
-    'html',
-    'css',
-    'javascript',
-    'react.js',
-    'json'
-  ];
-
-  const handle_selected_item = (item: string) => {
-    console.log(item);
-  }
-
-  return <div><ListGroup items={items} heading={"city"} onselectitem={handle_selected_item}/></div>;
-*/ 
