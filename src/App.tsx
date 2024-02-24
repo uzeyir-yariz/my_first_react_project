@@ -9,7 +9,11 @@ function app(){
     'json'
   ];
 
-  return <div><ListGroup items={items} heading={"city"}/></div>;
+  const handle_selected_item = (item: string) => {
+    console.log(item);
+  }
+
+  return <div><ListGroup items={items} heading={"city"} onselectitem={handle_selected_item}/></div>;
 }
 
 export default app;

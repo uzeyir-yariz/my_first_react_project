@@ -5,9 +5,10 @@ import { useState } from "react";
 interface props{
     items: string[];
     heading: string;
+    onselectitem: (item: string) => void;
 }
 
-function list_group({items, heading}: props){
+function list_group({items, heading, onselectitem}: props){
     
 
     const [selected_index, set_selected_index] = useState(-1);
@@ -25,8 +26,11 @@ function list_group({items, heading}: props){
                         className={selected_index === index ? 
                             'list-group-item active' : 
                             'list-group-item'} 
-                        key={item} 
-                        onClick={() => {set_selected_index(index);}}>
+                        key={item}
+                        onClick={() => {
+                            set_selected_index(index);
+                            onselectitem(item);
+                        }}>
                         {item}
                     </li>
                 ))}
