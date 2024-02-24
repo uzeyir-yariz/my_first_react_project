@@ -1,7 +1,21 @@
-import ListGroup from './components/list_group';
+// import ListGroup from './components/list_group';
+
+import Alert from "./components/alert";
 
 function app(){
-  let items = [
+  return(
+    <>
+      <Alert childiren="hello world"/>
+    </>
+  );
+}
+
+export default app;
+
+/* 
+* eski kodlar
+ 
+let items = [
     'html',
     'css',
     'javascript',
@@ -14,6 +28,4 @@ function app(){
   }
 
   return <div><ListGroup items={items} heading={"city"} onselectitem={handle_selected_item}/></div>;
-}
-
-export default app;
+*/ 
